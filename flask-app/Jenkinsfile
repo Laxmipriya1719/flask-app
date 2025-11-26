@@ -5,14 +5,14 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Installing dependencies...'
-                sh 'pip install -r requirements.txt'
+                sh 'pip install -r flask-app/requirements.txt'
             }
         }
 
         stage('Test') {
             steps {
                 echo 'Running tests...'
-                sh 'pytest --maxfail=1 --disable-warnings -q'
+                sh 'pytest flask-app/test/'
             }
         }
     }
