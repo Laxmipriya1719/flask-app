@@ -1,0 +1,6 @@
+# Ignore everything outside this project
+../*
+# Ignore Windows system files
+*.log
+*.dat
+*.ini
